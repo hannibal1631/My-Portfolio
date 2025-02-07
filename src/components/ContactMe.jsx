@@ -40,15 +40,27 @@ export default function ContactMe() {
 }
 
 function ContactCard({ icon, label, link }) {
+  let hoverText = label; // Default hover text
+
+  if (link.startsWith('mailto:')) {
+    hoverText = 'Send an Email';
+  } else if (link.startsWith('tel:')) {
+    hoverText = 'Call Now';
+  } else if (link.startsWith('https://')) {
+    hoverText = 'Visit Profile';
+  }
+
   return (
     <a
       href={link}
       className='flex items-center gap-4 p-4 rounded-md bg-green-900 bg-opacity-20 border border-green-500 transition duration-300 hover:bg-[#1a2b1e] hover:bg-opacity-30 relative'
+      target='_blank'
+      rel='noopener noreferrer'
     >
       <span className='text-2xl'>{icon}</span>
       <span className='text-lg'>{label}</span>
       <span className='absolute inset-0 flex items-center justify-center rounded-md opacity-0 transition-opacity duration-300 hover:opacity-100 bg-[#1a2b1e]/50 bg-opacity-40 backdrop-blur-md text-green-500 text-lg p-2'>
-        {link}
+        {hoverText}
       </span>
     </a>
   );
