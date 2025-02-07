@@ -33,7 +33,7 @@ export default function ContactMe() {
         <ContactCard
           icon={<FaXTwitter />}
           label='X (Twitter)'
-          link='www.twitter.com/@hannibal1631'
+          link='https://www.twitter.com/@hannibal1631'
         />
         <ContactCard
           icon={<FaGithubSquare />}
