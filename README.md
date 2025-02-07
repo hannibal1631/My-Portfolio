@@ -21,6 +21,9 @@ This is a personal portfolio website inspired by the **Fallout** aesthetic. It f
 - [ ] Improve accessibility for screen readers
 - [ ] Implement a theme toggle (alternative UI)
 
+## Live Page
+- **live-page-link**: (https://rupak-mukherjee-portfolio.vercel.app/)
+
 ## License
 This project is open-source and available under the **MIT License**.
 
