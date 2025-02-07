@@ -1,6 +1,12 @@
 import React from 'react';
-import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import {
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaGithubSquare,
+} from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { SiFrontendmentor } from 'react-icons/si';
 import pipboy from './logo/pipboy.png';
 
 export default function ContactMe() {
@@ -21,6 +27,16 @@ export default function ContactMe() {
       <div className='w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4'>
         <ContactCard icon={<FaLinkedin />} label='LinkedIn' link='#' />
         <ContactCard icon={<FaXTwitter />} label='X (Twitter)' link='#' />
+        <ContactCard
+          icon={<FaGithubSquare />}
+          label='GitHub'
+          link='https://github.com/hannibal1631'
+        />
+        <ContactCard
+          icon={<SiFrontendmentor />}
+          label='FrontendMentor'
+          link='https://www.frontendmentor.io/profile/hannibal1631'
+        />
         <ContactCard
           icon={<FaEnvelope />}
           label='Email'
