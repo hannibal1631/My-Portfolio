@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import pipboy from './logo/pipboy.png'
+import pipboy from './logo/pipboy.png';
 
 export default function ContactMe() {
   return (
@@ -24,9 +24,13 @@ export default function ContactMe() {
         <ContactCard
           icon={<FaEnvelope />}
           label='Email'
-          link='mukherjeerupak860@gmail.com'
+          link='mailto:mukherjeerupak860@gmail.com'
         />
-        <ContactCard icon={<FaPhone />} label='Phone' link='+91 7047604214' />
+        <ContactCard
+          icon={<FaPhone />}
+          label='Phone'
+          link='tel:+91-7047604214'
+        />
         {/* Placeholder for future links */}
         <div className='hidden sm:block'></div>
         <div className='hidden sm:block'></div>
