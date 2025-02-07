@@ -25,8 +25,16 @@ export default function ContactMe() {
 
       {/* Contact Grid */}
       <div className='w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4'>
-        <ContactCard icon={<FaLinkedin />} label='LinkedIn' link='#' />
-        <ContactCard icon={<FaXTwitter />} label='X (Twitter)' link='#' />
+        <ContactCard
+          icon={<FaLinkedin />}
+          label='LinkedIn'
+          link='https://www.linkedin.com/in/rupak-mukherjee-725ba322b/'
+        />
+        <ContactCard
+          icon={<FaXTwitter />}
+          label='X (Twitter)'
+          link='www.twitter.com/@hannibal1631'
+        />
         <ContactCard
           icon={<FaGithubSquare />}
           label='GitHub'
