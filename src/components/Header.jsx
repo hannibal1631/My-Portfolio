@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import vaultTec from './logo/vault-tec.png';
 
@@ -15,6 +15,24 @@ export default function Header() {
   const [active, setActive] = useState('Home');
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      navLinks.forEach((link) => {
+        const section = document.querySelector(link.href);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActive(link.name);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <header className='bg-[#1a2b1e]/60 backdrop-blur-md shadow-lg text-green-500 p-4 border-b-2 border-green-600 fixed w-full top-0 z-50'>
       <div className='w-full px-4 mx-auto flex justify-between items-center'>
@@ -22,8 +40,12 @@ export default function Header() {
         <img
           src={vaultTec}
           alt='vault-tec'
-          className='w-25'
-          onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })}
+          className='w-25 cursor-pointer'
+          onClick={() =>
+            document
+              .querySelector('#home')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
         />
 
         {/* Hamburger Menu - Mobile */}
@@ -46,7 +68,7 @@ export default function Header() {
                 <a
                   href={link.href}
                   onClick={(e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
+                    e.preventDefault();
                     setActive(link.name);
                     setMenuOpen(false);
                     document

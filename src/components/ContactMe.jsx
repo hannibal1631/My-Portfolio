@@ -5,7 +5,7 @@ import {
   FaPhone,
   FaGithubSquare,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaXTwitter, FaDiscord } from 'react-icons/fa6';
 import { SiFrontendmentor } from 'react-icons/si';
 import pipboy from './logo/pipboy.png';
 
@@ -39,6 +39,11 @@ export default function ContactMe() {
           icon={<FaGithubSquare />}
           label='GitHub'
           link='https://github.com/hannibal1631'
+        />
+        <ContactCard
+          icon={<FaDiscord />}
+          label='Discord'
+          link='https://discord.com/users/hannibal_lecter1631'
         />
         <ContactCard
           icon={<SiFrontendmentor />}
