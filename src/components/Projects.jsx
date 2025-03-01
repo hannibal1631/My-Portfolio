@@ -4,9 +4,9 @@ import projectLogo from './logo/projects.png';
 const projects = [
   {
     id: 1,
-    image: '/public/projectImages/volt-landing-page.png', // Replace with actual screenshot URL
-    title: 'Project One',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/public/projectImages/volt-landing-page.png',
+    title: 'VOLT Landing Page',
+    description: 'This is a landing page of an energy drink.',
     liveLink: 'https://volt-landing-page-black.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/VOLT-landing-page',
   },
@@ -44,7 +44,7 @@ export default function Projects() {
   return (
     <div
       id='projects'
-      className='bg-[#1a2b1e] flex flex-col md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700'
+      className='bg-[#1a2b1e] flex flex-col md:flex-row items-center justify-between w-full h-screen p-6 border-b-1 border-green-700'
     >
       {/* Left Image */}
       <div className='flex flex-col items-center justify-center w-full md:w-1/2 mb-6 md:mb-0'>
