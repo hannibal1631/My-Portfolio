@@ -4,11 +4,11 @@ import projectLogo from './logo/projects.png';
 const projects = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/300', // Replace with actual screenshot URL
+    image: '/public/projectImages/volt-landing-page.png', // Replace with actual screenshot URL
     title: 'Project One',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    liveLink: '#',
-    repoLink: '#',
+    liveLink: 'https://volt-landing-page-black.vercel.app/',
+    repoLink: 'https://github.com/hannibal1631/VOLT-landing-page',
   },
   {
     id: 2,
