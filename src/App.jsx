@@ -21,14 +21,14 @@ function App() {
   return (
     <>
       <Header />
-      <Slide triggerOnce>
+      <div className='mt-12'>
         <Home />
         <About />
         <Skills />
         <Projects />
         <Certificates />
         <ContactMe />
-      </Slide>
+      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ function Home() {
   return (
     <div
       id='home'
-      className='bg-[#1a2b1e] w-full h-screen flex flex-col lg:flex-row justify-evenly items-center border-b-1 border-green-700 px-6 lg:px-20'
+      className='bg-[#1a2b1e] w-full min-h-screen flex flex-col lg:flex-row justify-evenly items-center border-b-1 border-green-700 px-6 lg:px-20'
     >
       {/* Left Section: Text */}
       <div className='text-center uppercase lg:text-left max-w-xl'>

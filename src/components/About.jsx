@@ -5,7 +5,7 @@ function About() {
   return (
     <div
       id='about'
-      className='bg-[#1a2b1e] w-full h-screen flex flex-col lg:flex-row justify-evenly items-center border-b-1 border-green-700 px-6 lg:px-20'
+      className='bg-[#1a2b1e] w-full min-h-screen flex flex-col lg:flex-row justify-evenly items-center border-b-1 border-green-700 px-6 lg:px-20'
     >
       {/* Left Section: Image */}
       <div className='w-full lg:w-[40%] flex flex-col items-center justify-center mb-6 lg:mb-0'>

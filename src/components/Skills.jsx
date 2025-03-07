@@ -23,7 +23,7 @@ const Skills = () => {
   return (
     <section
       id='skills'
-      className='bg-[#1a2b1e] flex flex-col-reverse md:flex-row items-center justify-between w-full h-screen p-6 border-b-1 border-green-700'
+      className='bg-[#1a2b1e] flex flex-col-reverse md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700'
     >
       {/* Skills Section */}
       <motion.div
