@@ -21,17 +21,16 @@ const projects = [
   },
   {
     id: 3,
-    image: 'https://via.placeholder.com/300',
-    title: 'Project Two',
-    description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    liveLink: '#',
-    repoLink: '#',
+    image: '/projectImages/pick-your-absolute-cinema.png',
+    title: 'Pick Your Absolute Cinema',
+    description: 'Search for recommendation of Absolute Cinema',
+    liveLink: 'https://pick-your-absolute-cinema.vercel.app/',
+    repoLink: 'https://github.com/hannibal1631/absolute-cinema-picker',
   },
   {
     id: 4,
     image: 'https://via.placeholder.com/300',
-    title: 'Project Two',
+    title: 'Project Four',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     liveLink: '#',
