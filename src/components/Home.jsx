@@ -12,7 +12,7 @@ function Home() {
         <h3 className='text-green-600 text-lg lg:text-2xl font-semibold tracking-wider'>
           Hey, I'm
         </h3>
-        <h1 className='text-green-800 text-3xl lg:text-6xl font-bold mt-2'>
+        <h1 className='text-green-400 text-3xl lg:text-6xl font-bold mt-2'>
           Rupak Mukherjee
         </h1>
         <p className='text-green-500 text-sm lg:text-xl mt-4 leading-relaxed'>

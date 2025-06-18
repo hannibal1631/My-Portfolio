@@ -55,11 +55,6 @@ export default function ContactMe() {
           label='Email'
           link='mailto:mukherjeerupak860@gmail.com'
         />
-        <ContactCard
-          icon={<FaPhone />}
-          label='Phone'
-          link='tel:+91-7047604214'
-        />
         {/* Placeholder for future links */}
         <div className='hidden sm:block'></div>
         <div className='hidden sm:block'></div>
