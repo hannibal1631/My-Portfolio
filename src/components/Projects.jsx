@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     image: '/projectImages/volt-landing-page.png',
     title: 'VOLT Landing Page',
-    description: 'This is a landing page of an energy drink product.',
+    description: 'This is a landing page of an energy drink product',
     liveLink: 'https://volt-landing-page-black.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/VOLT-landing-page',
   },
@@ -23,18 +23,17 @@ const projects = [
     id: 3,
     image: '/projectImages/pick-your-absolute-cinema.png',
     title: 'Pick Your Absolute Cinema',
-    description: 'Search for recommendation of Absolute Cinema',
+    description: 'Search for recommendation of Absolute Cinemas',
     liveLink: 'https://pick-your-absolute-cinema.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/absolute-cinema-picker',
   },
   {
     id: 4,
-    image: 'https://via.placeholder.com/300',
-    title: 'Project Four',
-    description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    liveLink: '#',
-    repoLink: '#',
+    image: '/projectImages/find-your-fit.png',
+    title: 'Find Your Fit',
+    description: 'An online store to find your fit and show off your drip',
+    liveLink: 'https://find-your-fit-sand.vercel.app/',
+    repoLink: 'https://github.com/hannibal1631/find-your-fit',
   },
   // Add more projects here
 ];
