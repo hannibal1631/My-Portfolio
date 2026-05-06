@@ -1,6 +1,21 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaNpm, FaGitAlt, FaFigma, FaPaintBrush } from 'react-icons/fa';
-import { SiTailwindcss } from 'react-icons/si';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaBootstrap,
+  FaNpm,
+  FaGitAlt,
+  FaFigma,
+  FaPaintBrush,
+} from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiReactrouter,
+  SiCanva,
+} from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 import skillPng from './logo/skills.png';
 
@@ -19,11 +34,11 @@ const skills = [
   },
   {
     name: 'React Router',
-    icon: <FaReact className='text-green-500 text-5xl' />,
+    icon: <SiReactrouter className='text-green-500 text-5xl' />,
   },
   {
     name: 'React Native',
-    icon: <FaReact className='text-green-500 text-5xl' />,
+    icon: <TbBrandReactNative className='text-green-500 text-5xl' />,
   },
   {
     name: 'NPM',
@@ -39,7 +54,7 @@ const skills = [
   },
   {
     name: 'Canva',
-    icon: <FaPaintBrush className='text-green-500 text-5xl' />,
+    icon: <SiCanva className='text-green-500 text-5xl' />,
   },
 ];
 
@@ -62,7 +77,9 @@ const Skills = () => {
             className='flex flex-col items-center justify-center border-2 border-green-500 rounded-xl p-4 w-25 h-25 lg:w-35 lg:h-35 transition-colors duration-300 hover:bg-green-700 cursor-pointer'
           >
             {skill.icon}
-            <p className='text-green-500 mt-2 text-sm line-clamp-1'>{skill.name}</p>
+            <p className='text-green-500 mt-2 text-sm line-clamp-1'>
+              {skill.name}
+            </p>
           </div>
         ))}
       </motion.div>
