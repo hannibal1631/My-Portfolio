@@ -4,20 +4,20 @@ import projectLogo from './logo/projects.png';
 const projects = [
   {
     id: 1,
+    image: '/projectImages/WIP.jpg',
+    title: 'Task and Furious',
+    description:
+      'Keep track of your tasks and live your life a quarter mile at a time.',
+    liveLink: 'https://task-and-furious.vercel.app/',
+    repoLink: 'https://github.com/hannibal1631/Task-And-Furious',
+  },
+  {
+    id: 2,
     image: '/projectImages/volt-landing-page.png',
     title: 'VOLT Landing Page',
     description: 'This is a landing page of an energy drink product',
     liveLink: 'https://volt-landing-page-black.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/VOLT-landing-page',
-  },
-  {
-    id: 2,
-    image: '/projectImages/weekly-todo-app.png',
-    title: 'Weekly TODO App',
-    description:
-      'A basic todo app, where you can add tasks for weekdays. This features a voice add system.',
-    liveLink: 'https://weekly-todo-app-three.vercel.app/',
-    repoLink: 'https://github.com/hannibal1631/weekly-todo-app',
   },
   {
     id: 3,
