@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaNpm, FaGitAlt, FaFigma, FaPaintBrush } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import skillPng from './logo/skills.png';
@@ -8,7 +8,7 @@ const skills = [
   { name: 'HTML', icon: <FaHtml5 className='text-green-500 text-5xl' /> },
   { name: 'CSS', icon: <FaCss3Alt className='text-green-500 text-5xl' /> },
   { name: 'JavaScript', icon: <FaJs className='text-green-500 text-5xl' /> },
-  { name: 'React.js', icon: <FaReact className='text-green-500 text-5xl' /> },
+  { name: 'ReactJS', icon: <FaReact className='text-green-500 text-5xl' /> },
   {
     name: 'Tailwind CSS',
     icon: <SiTailwindcss className='text-green-500 text-5xl' />,
@@ -16,6 +16,30 @@ const skills = [
   {
     name: 'Bootstrap',
     icon: <FaBootstrap className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'React Router',
+    icon: <FaReact className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'React Native',
+    icon: <FaReact className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'NPM',
+    icon: <FaNpm className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'GIT',
+    icon: <FaGitAlt className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'Figma',
+    icon: <FaFigma className='text-green-500 text-5xl' />,
+  },
+  {
+    name: 'Canva',
+    icon: <FaPaintBrush className='text-green-500 text-5xl' />,
   },
 ];
 
@@ -27,7 +51,7 @@ const Skills = () => {
     >
       {/* Skills Section */}
       <motion.div
-        className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-12 md:gap-x-0 md:w-1/2'
+        className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-6 md:gap-x-0 md:w-1/2'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -38,7 +62,7 @@ const Skills = () => {
             className='flex flex-col items-center justify-center border-2 border-green-500 rounded-xl p-4 w-25 h-25 lg:w-35 lg:h-35 transition-colors duration-300 hover:bg-green-700 cursor-pointer'
           >
             {skill.icon}
-            <p className='text-green-500 mt-2 text-sm'>{skill.name}</p>
+            <p className='text-green-500 mt-2 text-sm line-clamp-1'>{skill.name}</p>
           </div>
         ))}
       </motion.div>
