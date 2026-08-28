@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -6,9 +7,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import ContactMe from './components/ContactMe';
-import { Slide } from 'react-awesome-reveal';
+import Preloader from './components/Preloader';
+
 
 function App() {
+  const [showPreloader, setShowPreloader] = useState(true)
+
   useEffect(() => {
     // Force browser to not restore scroll
     if ('scrollRestoration' in window.history) {
@@ -20,6 +24,9 @@ function App() {
 
   return (
     <>
+    {showPreloader && (
+      <Preloader onComplete={() => setShowPreloader(false)} />
+    )}
       <Header />
       <div className='mt-12'>
         <Home />
