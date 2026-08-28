@@ -1,12 +1,19 @@
 import { useState } from 'react';
-import preloader from '/videos/preloader.webm'
+import preloader from '/videos/preloader.webm';
 
 const Preloader = ({ onComplete }) => {
   const [isLeaving, setIsLeaving] = useState(false);
+  const [showFlash, setShowFlash] = useState(false);
 
   const handleVideoEnd = () => {
-    setIsLeaving(true);
+    // starts the flash animation and stays visible for a moment
+    setShowFlash(true);
 
+    setTimeout(() => {
+      setIsLeaving(true);
+    }, 120);
+
+    // preloader finishes and portfolio is revealed
     setTimeout(() => {
       onComplete();
     }, 500);
@@ -19,7 +26,7 @@ const Preloader = ({ onComplete }) => {
         flex items-center justify-center
         overflow-hidden
         bg-[#020b04]
-        transition-opacity duration-500 ease-out
+        transition-opacity duration-150
         ${isLeaving ? 'opacity-0' : 'opacity-100'}
       `}
     >
@@ -31,19 +38,31 @@ const Preloader = ({ onComplete }) => {
         onEnded={handleVideoEnd}
         className='
           w-[95vw]
-          max-w-[1100px]
           h-auto
           object-contain
-          md:w-[85vw]
-          lg:w-[75vw]
-          drop-shadow-[0_0_15px_rgba(0,255,100,0.25)]
+            
+          md:w-screen
+          md:h-screen
+          md:object-cover
         '
       >
-        <source
-          src={preloader}
-          type='video/webm'
-        />
+        <source src={preloader} type='video/webm' />
       </video>
+
+      {/* crt boot flash */}
+      <div
+        className={`
+    pointer-events-none
+    absolute inset-0
+    flex items-center
+    transition-opacity duration-75
+    ${showFlash ? 'opacity-100' : 'opacity-0'}
+  `}
+      >
+        <div className='h-[2px] w-full bg-[#b6ffb0]' />
+
+        <div className='absolute inset-0 bg-[#b6ffb0]/70' />
+      </div>
     </div>
   );
 };
