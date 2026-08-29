@@ -65,7 +65,8 @@ const Preloader = ({ onComplete }) => {
         '
       >
         <source
-          src={isMobile ? mobilePreloader : preloader}
+          // src={isMobile ? mobilePreloader : preloader}
+          src={preloader}
           type='video/webm'
         />
       </video>
