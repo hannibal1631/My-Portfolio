@@ -1,9 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import preloader from '/videos/preloader.webm';
+import mobilePreloader from '/videos/preloader-mobile.webm'
 
 const Preloader = ({ onComplete }) => {
   const [isLeaving, setIsLeaving] = useState(false);
   const [showFlash, setShowFlash] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
+
+  // to check if the user is on mobile or md+ screen
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)")
+
+    const handleResize = (event) => {
+      setIsMobile(event.matches)
+    }
+    setIsMobile(mediaQuery.matches)
+    mediaQuery.addEventListener('change', handleResize)
+
+    return () => {
+      mediaQuery.removeEventListener('change',handleResize)
+    }
+  }, [])
+  
 
   const handleVideoEnd = () => {
     // starts the flash animation and stays visible for a moment
