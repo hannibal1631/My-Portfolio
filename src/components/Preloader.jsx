@@ -1,27 +1,26 @@
 import { useEffect, useState } from 'react';
 import preloader from '/videos/preloader.webm';
-import mobilePreloader from '/videos/preloader-mobile.webm'
+import mobilePreloader from '/videos/preloader-mobile.webm';
 
 const Preloader = ({ onComplete }) => {
   const [isLeaving, setIsLeaving] = useState(false);
   const [showFlash, setShowFlash] = useState(false);
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   // to check if the user is on mobile or md+ screen
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 767px)")
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
 
     const handleResize = (event) => {
-      setIsMobile(event.matches)
-    }
-    setIsMobile(mediaQuery.matches)
-    mediaQuery.addEventListener('change', handleResize)
+      setIsMobile(event.matches);
+    };
+    setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleResize);
 
     return () => {
-      mediaQuery.removeEventListener('change',handleResize)
-    }
-  }, [])
-  
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  }, []);
 
   const handleVideoEnd = () => {
     // starts the flash animation and stays visible for a moment
@@ -49,6 +48,7 @@ const Preloader = ({ onComplete }) => {
       `}
     >
       <video
+        key={isMobile ? 'mobile' : 'desktop'}
         autoPlay
         muted
         playsInline
@@ -56,7 +56,7 @@ const Preloader = ({ onComplete }) => {
         onEnded={handleVideoEnd}
         className='
           w-[95vw]
-          h-auto
+          h-full
           object-contain
             
           md:w-screen
@@ -64,7 +64,10 @@ const Preloader = ({ onComplete }) => {
           md:object-cover
         '
       >
-        <source src={preloader} type='video/webm' />
+        <source
+          src={isMobile ? mobilePreloader : preloader}
+          type='video/webm'
+        />
       </video>
 
       {/* crt boot flash */}
