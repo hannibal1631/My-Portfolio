@@ -34,7 +34,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='bg-[#1a2b1e]/60 backdrop-blur-md shadow-lg text-green-500 p-4 border-b-2 border-green-600 fixed w-full top-0 z-50'>
+    <header className='bg-[#1a2b1e]/60 backdrop-blur-md shadow-lg p-4 border-b-2 border-lime-400 fixed w-full top-0 z-50'>
       <div className='w-full px-4 mx-auto flex justify-between items-center'>
         {/* Logo */}
         <img
@@ -50,7 +50,7 @@ export default function Header() {
 
         {/* Hamburger Menu - Mobile */}
         <button
-          className='lg:hidden text-green-400 focus:outline-none'
+          className='lg:hidden text-lime-400 focus:outline-none'
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -75,10 +75,10 @@ export default function Header() {
                       .querySelector(link.href)
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className={`block py-2 lg:py-0 text-xl uppercase font-semibold transition duration-300 tracking-wide ${
+                  className={`block px-2 py-2 lg:py-0 text-xl uppercase font-semibold transition-all hover:bg-lime-400 hover:opacity-80 hover:text-black tracking-wide ${
                     active === link.name
-                      ? 'text-green-500 brightness-125'
-                      : 'text-green-600 brightness-75'
+                      ? 'bg-lime-400 text-black'
+                      : 'text-lime-400'
                   }`}
                 >
                   {link.name}
