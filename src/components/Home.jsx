@@ -1,5 +1,5 @@
-import React from 'react';
 import pip from './logo/thumbsUp.png';
+import resume from '../assets/resume.pdf';
 
 function Home() {
   return (
@@ -9,15 +9,21 @@ function Home() {
     >
       {/* Left Section: Text */}
       <div className='text-center uppercase lg:text-left max-w-xl'>
-        <h3 className='text-green-600 text-lg lg:text-2xl font-semibold tracking-wider'>
+        <h4 className='text-lime-500 text-sm font-semibold animate-pulse mb-6'>&gt; Initializing fallout protocol...</h4>
+        <h3 className='text-lime-500 text-lg lg:text-2xl font-semibold tracking-wider mb-2'>
           Hey, I'm
         </h3>
-        <h1 className='text-green-400 text-3xl lg:text-6xl font-bold mt-2'>
+        <h1 className='text-green-400 text-3xl lg:text-6xl font-bold mb-4'>
           Rupak Mukherjee
         </h1>
-        <p className='text-green-500 text-sm lg:text-xl mt-4 leading-relaxed'>
+        <p className='text-lime-500 text-sm lg:text-xl leading-relaxed mb-3'>
           A Front-End Developer crafting seamless & responsive web experiences.
         </p>
+        <button className='inline-flex items-center justify-center transition-all text-lime-400/60 px-3 py-2 border-dashed border-2 text-sm md:text-xl uppercase cursor-pointer hover:text-lime-400 hover:bg-lime-400/10'>
+          <a href={resume} download={resume.pdf} target='_blank'>
+            Download Resume
+          </a>
+        </button>
       </div>
 
       {/* Right Section: Image */}
