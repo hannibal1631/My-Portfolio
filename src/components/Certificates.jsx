@@ -1,4 +1,3 @@
-import React from 'react';
 import certificateLogo from './logo/certificates.png';
 import resWebCert from './certificates/res-web.jpg';
 import gitFun from './certificates/git-hub-lab.jpg';
