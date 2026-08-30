@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -8,53 +7,48 @@ import {
   FaNpm,
   FaGitAlt,
   FaFigma,
-  FaPaintBrush,
 } from 'react-icons/fa';
-import {
-  SiTailwindcss,
-  SiReactrouter,
-  SiCanva,
-} from 'react-icons/si';
+import { SiTailwindcss, SiReactrouter, SiCanva } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 import skillPng from './logo/skills.png';
 
 const skills = [
-  { name: 'HTML', icon: <FaHtml5 className='text-green-500 text-5xl' /> },
-  { name: 'CSS', icon: <FaCss3Alt className='text-green-500 text-5xl' /> },
-  { name: 'JavaScript', icon: <FaJs className='text-green-500 text-5xl' /> },
-  { name: 'ReactJS', icon: <FaReact className='text-green-500 text-5xl' /> },
+  { name: 'HTML', icon: <FaHtml5 className='text-lime-400 text-5xl' /> },
+  { name: 'CSS', icon: <FaCss3Alt className='text-lime-400 text-5xl' /> },
+  { name: 'JavaScript', icon: <FaJs className='text-lime-400 text-5xl' /> },
+  { name: 'ReactJS', icon: <FaReact className='text-lime-400 text-5xl' /> },
   {
     name: 'Tailwind CSS',
-    icon: <SiTailwindcss className='text-green-500 text-5xl' />,
+    icon: <SiTailwindcss className='text-lime-400 text-5xl' />,
   },
   {
     name: 'Bootstrap',
-    icon: <FaBootstrap className='text-green-500 text-5xl' />,
+    icon: <FaBootstrap className='text-lime-400 text-5xl' />,
   },
   {
     name: 'React Router',
-    icon: <SiReactrouter className='text-green-500 text-5xl' />,
+    icon: <SiReactrouter className='text-lime-400 text-5xl' />,
   },
   {
     name: 'React Native',
-    icon: <TbBrandReactNative className='text-green-500 text-5xl' />,
+    icon: <TbBrandReactNative className='text-lime-400 text-5xl' />,
   },
   {
     name: 'NPM',
-    icon: <FaNpm className='text-green-500 text-5xl' />,
+    icon: <FaNpm className='text-lime-400 text-5xl' />,
   },
   {
     name: 'GIT',
-    icon: <FaGitAlt className='text-green-500 text-5xl' />,
+    icon: <FaGitAlt className='text-lime-400 text-5xl' />,
   },
   {
     name: 'Figma',
-    icon: <FaFigma className='text-green-500 text-5xl' />,
+    icon: <FaFigma className='text-lime-400 text-5xl' />,
   },
   {
     name: 'Canva',
-    icon: <SiCanva className='text-green-500 text-5xl' />,
+    icon: <SiCanva className='text-lime-400 text-5xl' />,
   },
 ];
 
@@ -66,7 +60,7 @@ const Skills = () => {
     >
       {/* Skills Section */}
       <motion.div
-        className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-6 md:gap-x-0 md:w-1/2'
+        className='grid place-items-center grid-cols-2 md:grid-cols-4 gap-6 md:gap-x-0 md:w-1/2'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -74,10 +68,10 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className='flex flex-col items-center justify-center border-2 border-green-500 rounded-xl p-4 w-25 h-25 lg:w-35 lg:h-35 transition-colors duration-300 hover:bg-green-700 cursor-pointer'
+            className='flex flex-col items-center justify-center border-2 border-lime-400/35 rounded-xl p-4 w-25 h-25 lg:w-35 lg:h-35 transition-all duration-300 opacity-65 hover:opacity-100 hover:border-lime-400 hover:bg-lime-400/10 cursor-pointer'
           >
             {skill.icon}
-            <p className='text-green-500 mt-2 text-sm line-clamp-1'>
+            <p className='text-lime-400 mt-2 text-sm line-clamp-1'>
               {skill.name}
             </p>
           </div>
@@ -96,7 +90,7 @@ const Skills = () => {
           alt='Skills'
           className='w-[400px] h-[350px] lg:w-[600px] lg:h-[500px]'
         />
-        <h2 className='text-2xl md:text-3xl font-bold uppercase text-green-400 text-center my-4 md:my-6'>
+        <h2 className='text-2xl md:text-3xl font-bold uppercase text-lime-400 text-center my-4 md:my-6 tracking-wide'>
           Skills
         </h2>
       </motion.div>
