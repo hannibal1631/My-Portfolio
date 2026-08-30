@@ -20,21 +20,21 @@ const Certificates = () => {
   return (
     <div
       id='certificates'
-      className='bg-[#1a2b1e] flex flex-col-reverse md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700'
+      className='bg-[#1a2b1e] flex flex-col-reverse md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700 uppercase'
     >
       {/* Certificate Grid */}
       <div className='grid grid-cols-1 place-items-center md:grid-cols-2 gap-4 flex-1 px-10'>
         {certificates.map((cert) => (
           <div
             key={cert.id}
-            className='bg-[#1a2b1e] border border-green-400 w-fit rounded-lg p-2'
+            className='bg-[#1a2b1e] border border-lime-400/35 w-fit p-3 opacity-75 hover:opacity-100 hover:border-lime-400 hover:bg-lime-400/10 transition-all duration-200 cursor-pointer'
           >
             <img
               src={cert.image}
               alt={cert.name}
-              className='w-full rounded-lg max-w-xs md:max-w-sm lg:max-w-md mx-auto'
+              className='w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto border border-lime-400'
             />
-            <h3 className='text-lg text-center text-green-500 mt-2'>
+            <h3 className='text-lg text-center text-lime-400 mt-2'>
               {cert.name}
             </h3>
           </div>
@@ -48,7 +48,7 @@ const Certificates = () => {
           alt='Certificates'
           className='w-full lg:w-130'
         />
-        <h2 className='text-2xl md:text-3xl font-bold uppercase text-green-400 text-center my-4 md:my-6'>
+        <h2 className='text-2xl md:text-3xl font-bold uppercase text-lime-400 text-center my-4 md:my-6 tracking-wide'>
           Certificates
         </h2>
       </div>
