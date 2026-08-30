@@ -4,3 +4,8 @@
 @theme {
   --font-sans: 'JetBrains Mono', monospace;
 }
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
