@@ -7,7 +7,7 @@ const projects = [
     image: '/projectImages/WIP.jpg',
     title: 'Task and Furious',
     description:
-      'Keep track of your tasks and live your life a quarter mile at a time.',
+      'Keep track of your tasks and live your life a quarter mile at a time',
     liveLink: 'https://task-and-furious.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/Task-And-Furious',
   },
@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     image: '/projectImages/volt-landing-page.png',
     title: 'VOLT Landing Page',
-    description: 'This is a landing page of an energy drink product',
+    description: 'Drink VOLT and feel the thunder in your veins',
     liveLink: 'https://volt-landing-page-black.vercel.app/',
     repoLink: 'https://github.com/hannibal1631/VOLT-landing-page',
   },
@@ -42,7 +42,7 @@ export default function Projects() {
   return (
     <div
       id='projects'
-      className='bg-[#1a2b1e] flex flex-col md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700'
+      className='bg-[#1a2b1e] uppercase flex flex-col md:flex-row items-center justify-between w-full min-h-screen p-6 border-b-1 border-green-700'
     >
       {/* Left Image */}
       <div className='flex flex-col items-center justify-center w-full md:w-1/2 mb-6 md:mb-0'>
@@ -51,7 +51,7 @@ export default function Projects() {
           alt='projects logo'
           className='max-w-xs md:max-w-135'
         />
-        <h2 className='text-2xl md:text-3xl font-bold uppercase text-green-400 text-center my-4 md:my-6'>
+        <h2 className='text-2xl md:text-3xl font-bold text-lime-400 text-center my-4 md:my-6 tracking-wide'>
           Projects
         </h2>
       </div>
@@ -61,17 +61,17 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className='shadow-lg rounded-2xl bg-green-800 border border-green-600 p-3 md:p-4 w-full max-w-xs mx-auto md:max-w-none'
+            className='shadow-lg border border-lime-400/35 p-3 md:p-4 w-full max-w-xs mx-auto md:max-w-none opacity-65 hover:opacity-100 hover:border-lime-400 hover:bg-lime-400/10 transition-all duration-200 cursor-pointer'
           >
             <img
               src={project.image}
               alt={project.title}
-              className='w-full h-36 md:h-40 object-cover rounded-lg border-2 border-green-600'
+              className='w-full h-36 md:h-40 object-cover border border-lime-400'
             />
-            <h3 className='text-lg md:text-xl font-semibold mt-4 text-green-300'>
+            <h3 className='text-lg md:text-xl font-semibold mt-4 text-lime-400'>
               {project.title}
             </h3>
-            <p className='text-green-400 mt-2 text-sm md:text-base'>
+            <p className='text-lime-400/90 mt-2 text-sm md:text-base'>
               {project.description}
             </p>
             <div className='flex flex-col gap-2 mt-4'>
@@ -79,7 +79,7 @@ export default function Projects() {
                 href={project.liveLink}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='w-full text-center py-2 bg-green-700 hover:bg-green-600 text-green-200 border border-green-500 rounded-md'
+                className='w-full text-center py-2 bg-lime-500 text-black border border-lime-400 hover:bg-lime-400'
               >
                 Live Page
               </a>
@@ -87,7 +87,7 @@ export default function Projects() {
                 href={project.repoLink}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='w-full text-center py-2 bg-green-900 hover:bg-green-800 text-green-300 border border-green-600 rounded-md'
+                className='w-full text-center py-2 transition-all text-lime-400/60 hover:text-lime-400 hover:bg-lime-400/10 border border-lime-400'
               >
                 GitHub
               </a>
