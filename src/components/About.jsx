@@ -20,7 +20,7 @@ function About() {
       </div>
 
       {/* Right Section: About Me Text */}
-      <div className='text-center lg:text-left max-w-2xl'>
+      <div className='text-left uppercase max-w-2xl'>
         <p className='text-lime-400 text-lg lg:text-2xl'>
           I’m a self-taught
           <span className='text-amber-500 font-semibold'> Front-End Developer</span> with a

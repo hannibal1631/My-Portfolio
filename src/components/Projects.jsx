@@ -67,10 +67,10 @@ export default function Projects() {
               alt={project.title}
               className='w-full h-36 md:h-40 object-cover border border-lime-400'
             />
-            <h3 className='text-lg md:text-xl font-semibold mt-4 text-lime-400'>
+            <h3 className='text-lg md:text-xl font-semibold mt-4 text-lime-400 line-clamp-1'>
               {project.title}
             </h3>
-            <p className='text-lime-400/90 mt-2 text-sm md:text-base'>
+            <p className='text-lime-400/90 mt-2 text-sm md:text-base line-clamp-2'>
               {project.description}
             </p>
             <div className='flex flex-col gap-2 mt-4'>

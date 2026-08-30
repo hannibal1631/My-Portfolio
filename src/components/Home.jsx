@@ -8,7 +8,7 @@ function Home() {
       className='bg-[#1a2b1e] w-full min-h-screen flex flex-col lg:flex-row justify-evenly items-center border-b-1 border-green-700 px-6 lg:px-20'
     >
       {/* Left Section: Text */}
-      <div className='text-center uppercase lg:text-left max-w-xl'>
+      <div className='uppercase text-left max-w-xl'>
         <h4 className='text-lime-500 text-sm font-semibold animate-pulse mb-6'>&gt; Initializing fallout protocol...</h4>
         <h3 className='text-lime-500 text-lg lg:text-2xl font-semibold tracking-wider mb-2'>
           Hey, I'm
